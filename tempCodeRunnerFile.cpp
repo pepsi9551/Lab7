@@ -29,29 +29,35 @@ int studentID,x;
 
 
 
+void gear(int x){
+    x = (x/10000000) - 12;
+    cout << "Fahsai: I think you may be GEAR "<< x <<". I have a free movie ticket for you.\n";
+}
 
 int main(){
     cout << "Fahsai: Sawadee ka...Can you tell me your name?\n";
     cout << "?????: ";
     getline(cin, name);
+    cin.ignore();
     cout << "Fahsai: Wow!!! " << name <<" is a really cool name.\n";
     cout << "Fahsai: I think you are an Engineering student. What is your student ID?\n";
     cout << name << ": ";
     cin >> studentID;
-    studentID = (studentID/10000000) - 12;
-    cout << "Fahsai: I think you may be GEAR "<< studentID <<". I have a free movie ticket for you.\n";
+    gear(studentID);
     cin.ignore();
-    cout << "Fahsai: Let's go to the cinema together!!!\n";
     cout << "Fahsai: What movie do you want to watch?\n";
     cout << name << ": ";
     getline(cin, moviename);
+    cin.ignore();
     cout << "Fahsai: So....which day are you free to go with me?\n";
     cout << name << ": ";
     getline(cin, date);
+    cin.ignore();
     cout << "Fahsai: " << date << "....that is OK!!! I'm looking forward to watching "<< moviename <<" with you." << endl;
     cout << name << ": ";
     getline(cin, text);
-    cout << "Fahsai: 555+ see you " << date << ". Bye Bye \\(^ ^)/\n";
+    cin.ignore();
+    cout << "Fahsai: 555+ see you Next Monday. Bye Bye \\(^ ^)/\n";
 
 
 
